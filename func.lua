@@ -7,10 +7,9 @@ function logError(o)
 	print("Error : ".. o);
 end
 
+class = {};
 
-
-local class = {}
-function class(o)
+function class:New(o)
 	o = o or {}
 	setmetatable(o,self)
 	self.__index = self
